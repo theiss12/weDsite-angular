@@ -1,0 +1,77 @@
+.component-question {
+    animation-name: question-fade-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+    @keyframes question-fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    &__title {
+        text-transform: capitalize;
+        margin: 0 0 24px;
+        text-align: center;
+        font-size: 36px;
+    }
+
+    &__input {
+        width: 100%;
+        box-sizing: border-box;
+        background-color: rgba(255,255,255,.5);
+        color: var(--dark-color);
+        border: none;
+        border-bottom: 3px solid var(--dark-color);
+        text-align: center;
+        padding: 5px;
+        font-size: 24px;
+        margin: 0 0 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,.3);
+    }
+
+    &__navigation {
+        text-align: right;
+    }
+
+    &__navigation-button {
+        background-color: var(--accent-color);
+        border: none;
+        box-sizing: border-box;
+        padding: 5px;
+        font-size: 24px;
+        color: var(--base-color);
+        width: 48%;
+        box-shadow: 0 0 10px rgba(0,0,0,.3);
+        cursor: pointer;
+        transition: all .25s;
+
+        &:first-child {
+            margin-right: 4%;
+        }
+
+        &:active {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+    }
+}
+
+@media (min-width: 421px) {
+    .component-question {
+        width: 50%;
+        margin: 0 auto;
+        padding: 30px;
+        border: 1px solid var(--light-color);
+
+        &__navigation-button {
+            &:hover {
+                background-color: var(--dark-color);
+                color: var(--light-color);
+            }
+        }
+    }
+}

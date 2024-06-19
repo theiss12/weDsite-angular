@@ -1,0 +1,36 @@
+table {
+    border-collapse: collapse;
+    border: 1px solid var(--dark-color);
+    font-size: 24px;
+    margin: 0 auto 24px auto;
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    thead {
+        tr {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            border-bottom: 3px double var(--light-color);
+        }
+    }
+
+    tbody {
+        tr {
+            background-color: var(--base-color);
+            border-bottom: 1px solid var(--dark-color);
+
+            &:nth-child(even) {
+                background-color: var(--light-color);
+            }
+        }
+    }
+}
+
+@media (min-width: 421px) {
+    table {
+        margin: 0 auto 48px auto;
+    }
+}

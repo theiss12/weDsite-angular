@@ -1,0 +1,38 @@
+<section class="component-cover">
+    <div class="component-cover__images">
+        <div
+            [ngClass]="{
+                'component-cover__language': true,
+                'component-cover__language--hu': imageUrls[currentPage].includes('hu'),
+                'component-cover__language--de': imageUrls[currentPage].includes('de')
+            }"
+        >
+            <span class="stripe"></span>
+            <span class="stripe"></span>
+            <span class="stripe"></span>
+        </div>
+        <img 
+            *ngFor="let imageUrl of imageUrls"
+            [src]="imageUrl"
+            [ngClass]="{
+                'component-cover__image': true,
+                'component-cover__image--active': activateImage(imageUrl),
+                'component-cover__image--right': currentDirection > 0,
+                'component-cover__image--left': currentDirection < 0
+            }"
+        >
+    </div>
+    <button
+        class="component-cover__navigation"
+        (click)="movePage(-1)"
+    >
+        <span class="triangle triangle--left"></span>
+    </button>
+    <button
+        class="component-cover__navigation"
+        (click)="movePage(1)"
+    >
+        <span class="triangle triangle--right"></span>
+    </button>
+    <pagination [numberOfPages]="imageUrls.length" (pageOutput)="handlePagination($event)" [activePage]="currentPage"></pagination>
+</section>

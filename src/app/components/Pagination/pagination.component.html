@@ -1,0 +1,13 @@
+<section class="component-pagination">
+    <button
+        *ngFor="let pageNumber of pageNumbers"
+        [value]="pageNumber"
+        (click)="emitPageChange($event)"
+        [ngClass]="{
+            'component-pagination__button': true,
+            'component-pagination__button--active': pageNumber === activePage
+        }"
+    >
+        {{pageNumber}}
+    </button>
+</section>

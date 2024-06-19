@@ -1,0 +1,119 @@
+.screen-rsvp {
+    &__steps {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../../../assets/images/home.jpg);
+        margin: 0 0 24px;
+    }
+
+    &__step {
+        position: relative;
+        margin: 16px 0;
+        padding: 10px;
+        background-color: rgba(255,255,255,.5);
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,.5);
+        width: 25%;
+        transition: all .25s;
+
+        &:active {
+            background-color: white;
+        }
+
+        .step {
+            &__index,
+            &__name {
+                font-size: 16px;
+                text-align: center;
+            }
+
+            &__index {
+                --index-box-dimensions: 30px;
+                width: var(--index-box-dimensions);
+                height: var(--index-box-dimensions);
+                position: absolute;
+                top: 0px;
+                translate: -50% -50%;
+                left: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--accent-color);
+                box-shadow: 0 0 20px rgba(0,0,0,.5);
+                color: var(--base-color);
+                padding: 0;
+                border-radius: 50%;
+                margin: 0 auto;
+            }
+
+            &__name {
+                text-transform: capitalize;
+                margin: 0;
+            }
+        }
+    }
+
+    &__summary {
+        .summary {
+            &__title {
+                text-align: center;
+            }
+        }
+
+        .button {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+        }
+    }
+}
+
+@media (min-width: 421px) {
+    .screen-rsvp {
+        &__steps {
+            flex-direction: row;
+            justify-content: flex-start;
+            height: 300px;
+            margin: 0 0 48px;
+        }
+
+        &__step {
+            width: 10%;
+            height: 100px;
+            margin: 0 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+
+            .step {
+                &__index,
+                &__name {
+                    font-size: 24px;
+                }
+
+                &__index {
+                    --index-box-dimensions: 50px;
+                }
+            }
+        }
+
+        &__summary {
+            .summary {
+                &__title {
+                    font-size: 36px;
+                    margin: 0 0 48px;
+                }
+            }
+            .button {
+                width: 25%;
+            }
+        }
+    }
+}

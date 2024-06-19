@@ -1,1 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --dark-color: darkolivegreen;
+    --light-color: rgb(154, 171, 137);
+    --accent-color: goldenrod;
+    --base-color: beige;
+}
+
+body {
+    margin: 0;
+    background-color: var(--base-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    color: var(--dark-color);
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.button {
+    padding: 10px;
+    background-color: var(--dark-color);
+    border: 1px solid var(--dark-color);
+    border-radius: 500px;
+    cursor: pointer;
+    color: var(--base-color);
+    transition: all .25s;
+
+    &:active {
+        color: var(--dark-color);
+        background-color: var(--base-color);
+    }
+
+    &:disabled {
+        opacity: .5;
+        cursor: not-allowed;
+
+        &:active {
+            color: var(--base-color);
+            background-color: var(--dark-color);
+        }
+    }
+}
+
+.triangle {
+    --triangle-size: 20px;
+    --triangle-size-correction: 5px;
+    --invisible-size: calc(var(--triangle-size) - var(--triangle-size-correction));
+    --color: rgba(0,0,0,.5);
+
+    display: inline-flex;
+    width: 0;
+    height: 0;
+    border-left: var(--invisible-size) solid transparent;
+    border-right: var(--invisible-size) solid transparent;
+    border-top: var(--triangle-size) solid var(--color);
+    transition: all .25s;
+
+    &--right {
+        rotate: -90deg;
+    }
+
+    &--left {
+        rotate: 90deg;
+    }
+}
+
+@media (min-width: 421px) {
+    .button {
+        &:hover {
+            color: var(--dark-color);
+            background-color: var(--base-color);
+        }
+
+        &:disabled {
+            &:hover {
+                color: var(--base-color);
+                background-color: var(--dark-color);
+            }
+        }
+    }
+
+    .triangle {
+        --triangle-size: 40px;
+        --triangle-size-correction: 10px;
+    }
+}

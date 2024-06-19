@@ -1,0 +1,119 @@
+.screen-directions {
+    min-height: 100svh;
+    background-image: url(../../../assets/images/mansion.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation-name: directions-fade-in;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    padding: 0 0 64px;
+
+    @keyframes directions-fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    &__accommodation,
+    &__directions {
+        color: white;
+        background-color: rgba(0,0,0,.6);
+        box-shadow: 0 0 20px rgba(0,0,0,.5);
+    }
+
+    &__accommodation {
+        padding: 20px;
+        margin: 0 0 20px;
+
+        a {
+            color: white;
+        }
+
+        .accommodation {
+            &__headline,
+            &__address {
+                font-size: 18px;
+                text-align: center;
+            }
+
+            &__information {
+                list-style-type: none;
+                font-size: 18px;
+
+                li {
+                    text-indent: -32px;
+                    margin: 0 0 20px;
+
+                    &::before {
+                        content: "💍";
+                    }
+                }
+            }
+        }
+    }
+
+    .directions {
+        &__headline {
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        &__map {
+            --map-dimensions: 335px;
+            width: var(--map-dimensions);
+            height: var(--map-dimensions);
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (min-width: 421px) {
+    .screen-directions {
+        padding: unset;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+
+            > * {
+                width: 47%;
+            }
+        }
+
+        &__accommodation {
+            padding: 30px;
+            margin: 0;
+    
+            .accommodation {
+                &__headline,
+                &__address {
+                    font-size: 32px;
+                }
+    
+                &__information {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .directions {
+            &__headline {
+                margin: 0;
+                padding: 32px;
+                font-size: 32px;
+            }
+    
+            &__map {
+                --map-dimensions: 95%;
+                height: 310px;
+            }
+        }
+    }
+}

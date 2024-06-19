@@ -1,0 +1,30 @@
+.component-receipt {
+    &__message {
+        padding: 24px 0px;
+        margin: 0 0 48px;
+        border-top: 1px solid var(--dark-color);
+        border-bottom: 1px solid var(--dark-color);
+        text-align: center;
+    }
+
+    .button {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+    }
+}
+
+@media (min-width: 421px) {
+    .component-receipt {
+        &__message {
+            font-size: 48px;
+            padding: 48px 0px;
+            width: 50%;
+            margin: 0 auto 64px auto;
+        }
+
+        .button {
+            width: 25%;
+        }
+    }
+}

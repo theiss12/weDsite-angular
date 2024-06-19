@@ -1,0 +1,46 @@
+<section class="component-question">
+    <h2 class="component-question__title">
+        {{name}}?
+    </h2>
+    <div class="component-question__input-container" [ngSwitch]="type">
+        <input
+            *ngSwitchCase="'string'"
+            class="component-question__input"
+            type="text"
+            (input)="saveAnswer($event)"
+            [value]="answer"
+        >
+        <input
+            *ngSwitchCase="'number'"
+            class="component-question__input"
+            type="number"
+            (input)="saveAnswer($event)"
+            [value]="answer"
+        >
+        <select
+            *ngSwitchCase="'boolean'"
+            class="component-question__input"
+            (input)="saveAnswer($event)"
+        >
+            <option>No</option>
+            <option>Yes</option>
+        </select>
+        <div class="component-question__navigation">
+            <button 
+                *ngIf="index > 0"
+                class="component-question__navigation-button"
+                (click)="emitIndexChange(-1)"
+            >
+                Previous
+            </button>
+            <button
+                class="navigation__button"
+                class="component-question__navigation-button"
+                (click)="emitIndexChange(1)"
+            >
+                Next
+            </button>
+        </div>
+    </div>
+    
+</section>

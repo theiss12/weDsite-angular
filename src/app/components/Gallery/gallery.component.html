@@ -1,0 +1,42 @@
+<section class="component-gallery">
+    <div class="component-gallery__display">
+        <img
+            [src]="imageUrls[selectedImageIndex]"
+            class="display__selected-image"
+            (click)="toggleInspector()"
+        >
+    </div>
+    <div class="component-gallery__preview">
+        <img 
+            *ngFor="let imageUrl of imageUrls"
+            [src]="imageUrl" class="preview__image"
+            (click) = "swapImage(imageUrl)"
+        >
+    </div>
+    <div
+        [ngClass]="{
+            'component-gallery__inspector': true,
+            'component-gallery__inspector--open': isInspectorOpen
+        }"
+    >
+        <img [src]="imageUrls[selectedImageIndex]" class="inspector__current-image">
+        <button
+            class="inspector__button inspector__button--close"
+            (click)="toggleInspector()"
+        >
+            ✖
+        </button>
+        <button
+            class="inspector__button inspector__button--previous"
+            (click)="moveImageIndex(-1)"
+        >
+            ◂
+        </button>
+        <button
+            class="inspector__button inspector__button--next"
+            (click)="moveImageIndex(1)"
+        >
+            ▸
+        </button>
+    </div>
+</section>

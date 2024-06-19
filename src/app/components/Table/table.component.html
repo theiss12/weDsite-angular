@@ -1,0 +1,16 @@
+<table class="component-table">
+    <thead>
+        <tr>
+            <th *ngFor="let headData of head">
+                {{headData}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of body">
+            <td *ngFor="let data of row">
+                {{data}}
+            </td>
+        </tr>
+    </tbody>
+</table>

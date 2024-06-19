@@ -1,0 +1,45 @@
+<section class="component-navigation">
+    <div class="component-navigation__toggle-bar">
+        <button
+            class="component-navigation__menu-toggle"
+            (click)="toggleClosed()"
+        >
+            <span class="menu-toggle__stripe"></span>
+            <span class="menu-toggle__stripe"></span>
+            <span class="menu-toggle__stripe"></span>
+        </button>
+    </div>
+    <ul
+        [ngClass]="{
+            'component-navigation__items': true,
+            'component-navigation__items--closed': closed
+        }"
+    >
+        <li
+            class="component-navigation__item--closer"
+        >
+            <button
+                class="component-navigation__menu-toggle"
+                (click)="toggleClosed()"
+            >
+                <span class="menu-toggle__stripe"></span>
+                <span class="menu-toggle__stripe"></span>
+                <span class="menu-toggle__stripe"></span>
+            </button>
+        </li>
+        <li
+            class="component-navigation__item"
+            *ngFor="let navigationItem of navigationItems"
+        >
+            <a
+                [routerLink]="navigationItem.endpoint"
+                [ngClass]="{
+                    active: router.url === navigationItem.endpoint
+                }"
+                (click)="toggleClosed()"
+            >
+                {{navigationItem.label}}
+            </a>
+        </li>
+    </ul>
+</section>

@@ -1,0 +1,18 @@
+<section class="screen-thank-you">
+    <h2 class="screen-thank-you__title">Thank you so much for gifting us:</h2>
+    <p class="screen-thank-you__gifts">
+        <span *ngFor="let gift of giftedItems">
+            {{gift.name}}<span *ngIf="!isLastItem(gift)">, </span>
+        </span>
+        <span *ngIf="noGifts">
+            nothing
+        </span>
+    </p>
+    <h2 class="screen-thank-you__subtitle">
+        So kind of you 
+        <span *ngIf="noGifts; else elseBlock">🙄</span>
+        <ng-template #elseBlock>
+            <span>🤗</span>
+        </ng-template>
+    </h2>
+</section>

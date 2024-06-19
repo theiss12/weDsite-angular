@@ -1,0 +1,143 @@
+.component-cover {
+    overflow: hidden;
+    position: relative;
+
+    &__images {
+        --navigation-height: 50px;
+        position: relative;
+        width: 100svw;
+        height: calc(100svh - var(--navigation-height));
+    }
+
+    &__language {
+        --banner-size: 40px;
+        --banner-margin: 20px;
+        --color-1: transparent;
+        --color-2: transparent;
+        --color-3: transparent;
+
+        width: var(--banner-size);
+        height: var(--banner-size);
+        position: absolute;
+        top: var(--banner-margin);
+        left: var(--banner-margin);
+        z-index: 1;
+        border-radius: 50%;
+        overflow: hidden;
+
+        .stripe {
+            display: block;
+            height: 33.33%;
+            width: 100%;
+            transition: background-color .25s;
+            &:nth-child(1) {
+                background-color: var(--color-1);
+            }
+            &:nth-child(2) {
+                background-color: var(--color-2);
+            }
+            &:nth-child(3) {
+                background-color: var(--color-3);
+            }
+        }
+
+        &--hu {
+            --color-1: red;
+            --color-2: white;
+            --color-3: green;
+        }
+
+        &--de {
+            --color-1: black;
+            --color-2: red;
+            --color-3: gold;
+        }
+    }
+
+    &__image {
+        width: 100vmin;
+        object-fit: contain;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 2s;
+
+        &--active {
+            opacity: 1;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+
+        &--active.component-cover__image--left {
+            animation-name: left-slide;
+        }
+
+        &--active.component-cover__image--right {
+            animation-name: right-slide;
+        }
+
+        @keyframes left-slide {
+            from {
+                translate: 100% 0;
+            }
+            to {
+                translate: 0 0;
+            }
+        }
+
+        @keyframes right-slide {
+            from {
+                translate: -100% 0;
+            }
+            to {
+                translate: 0 0;
+            }
+        }
+    }
+
+    &__navigation {
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+        height: 60%;
+        width: 25%;
+        padding: 0;
+        font-size: 72px;
+        border: none;
+        background-color: transparent;
+
+        &:focus-visible {
+            outline: none;
+        }
+
+        &:nth-of-type(1) {
+            left: 0px;
+        }
+
+        &:nth-of-type(2) {
+            right: 0px;
+        }
+    }
+}
+
+@media (min-width: 421px) {
+    .component-cover {
+        background-image: linear-gradient(to right, var(--light-color), transparent, transparent, transparent, transparent, var(--light-color));
+        
+        &__images {
+            --navigation-height: 70px;
+        }
+
+        &__image {
+            max-height: 100%;
+        }
+
+        &__navigation {
+            cursor: pointer;
+
+            
+        }
+    }
+}

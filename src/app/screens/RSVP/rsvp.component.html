@@ -1,0 +1,50 @@
+<section class="screen-rsvp">
+    <div class="screen-rsvp__steps">
+        <div
+            class="screen-rsvp__step"
+            *ngFor="let step of dataProperties"
+            (click)="setCurrentQuestion(dataProperties.indexOf(step))"
+        >
+            <h2 class="step__index">
+                {{dataProperties.indexOf(step) + 1}}
+            </h2>
+            <h3 class="step__name">
+                {{step}}?
+            </h3>
+        </div>
+    </div>
+    <div *ngFor="let name of dataProperties">
+        <div *ngIf="dataProperties.indexOf(name) === currentQuestion" class="container">
+            <question
+                [index]="dataProperties.indexOf(name)"
+                [formData]="formData"
+                (indexOutput)="setCurrentQuestion($event)"
+            ></question>
+        </div>
+    </div>
+    <div
+        *ngIf="currentQuestion >= dataProperties.length"
+        class="screen-rsvp__summary"
+    >
+        <h3 class="summary__title">Please review before sending 😊</h3>
+        <table-component
+            [head]="[
+                'Question', 'Answer'
+            ]"
+            [body]="[
+                ['Name', formData['name']],
+                ['Coming', formData['coming'].toString()],
+                ['Companions', formData['companions'].toString()],
+                ['Allergy', formData['allergy']],
+            ]"
+        ></table-component>
+        <button
+            class="button"
+            (click)="submitFormData()"
+            [disabled]="formData.name === ''"
+            [title]="formData.name === '' ? 'Who are you even?' : ''"
+        >
+            Submit
+        </button>
+    </div>
+</section>

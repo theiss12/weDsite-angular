@@ -1,0 +1,24 @@
+<section class="screen-gifts">
+    <twiggy-title title="Gifts"></twiggy-title>
+    <div class="container">
+        <ul class="screen-gifts__items">
+            <li *ngFor="let gift of gifts" class="screen-gifts__item">
+                <label class="item__label">
+                    <input
+                        type="checkbox"
+                        class="item__checkbox"
+                        [checked]="gift.taken"
+                        (change)="toggleGiftTaken(gift)"
+                    >
+                    {{gift.name}}
+                </label>
+            </li>
+        </ul>
+        <button
+            class="button"
+            (click)="submitGifts()"
+        >
+            Commit Gifts
+        </button>
+    </div>
+</section>
