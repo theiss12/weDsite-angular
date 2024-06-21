@@ -33,7 +33,7 @@
             ]"
             [body]="[
                 ['Name', formData['name']],
-                ['Coming', formData['coming'].toString()],
+                ['Coming', formData['coming'] ? 'Yes' : 'No'],
                 ['Companions', formData['companions'].toString()],
                 ['Allergy', formData['allergy']],
             ]"

@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit } from "@angular/core";
+import { Component, Input, Output, EventEmitter, OnInit, OnDestroy } from "@angular/core";
 import { NgSwitch, NgSwitchCase, NgSwitchDefault, NgIf } from "@angular/common";
 
 @Component({
@@ -8,7 +8,7 @@ import { NgSwitch, NgSwitchCase, NgSwitchDefault, NgIf } from "@angular/common";
     styleUrls: ["./question.component.scss"],
     imports: [NgSwitch, NgSwitchCase, NgSwitchDefault, NgIf]
 })
-export class Question implements OnInit {
+export class Question implements OnInit, OnDestroy {
     @Input() index: number = -1;
     @Input() formData: any = {};
     @Output() indexOutput = new EventEmitter<number>();
@@ -48,5 +48,9 @@ export class Question implements OnInit {
         if (this.type !== "boolean") {
             this.answer = this.formData[this.name];
         }
+    }
+
+    ngOnDestroy(): void {
+        this.setFormData();
     }
 }

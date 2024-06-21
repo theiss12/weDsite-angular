@@ -9,12 +9,12 @@
 
     .button {
         display: block;
-        margin: 0 auto;
+        margin: 0 auto 72px auto;
         width: 50%;
     }
 }
 
-@media (min-width: 421px) {
+@media (min-width: 1001px) {
     .component-receipt {
         &__message {
             font-size: 48px;

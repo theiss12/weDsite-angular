@@ -1,21 +1,28 @@
 <section class="screen-schedule">
     <twiggy-title title="Schedule"></twiggy-title>
-    <div class="container">
-        <h2 class="screen-schedule__title">The Great Day</h2>
-        <ul class="screen-schedule__program">
-            <li *ngFor="let programItem of program" class="screen-schedule__program-item">
-                <em class="time">{{programItem.time}}</em> {{programItem.label}}
-            </li>
-        </ul>
-        <h2 class="screen-schedule__place-headline">Place</h2>
-        <ul class="screen-schedule__place-infos">
-            <li class="screen-schedule__place-info">Château Bouffémont</li>
-            <li class="screen-schedule__place-info">8 Rue Léon Giraudeau, 95570 Bouffémont, France</li>
-        </ul>
-        <p class="screen-schedule__message">
+    <!-- <div class="container"> -->
+        <main class="screen-schedule__main">
+            <h2 class="screen-schedule__title">
+                The Great Day
+            </h2>
+            <ul class="screen-schedule__program">
+                <li *ngFor="let programItem of program" class="screen-schedule__program-item">
+                    <em class="time">{{programItem.time}}</em> {{programItem.label}}
+                </li>
+            </ul>
+            <h2 class="screen-schedule__place-headline">Place</h2>
+            <ol class="screen-schedule__place-infos">
+                <li class="screen-schedule__place-info">Cathédrale Notre-Dame de Paris</li>
+                <li class="screen-schedule__place-info">Château Bouffémont</li>
+                <ul>
+                    <li class="screen-schedule__place-info">8 Rue Léon Giraudeau, 95570 Bouffémont, France</li>
+                </ul>
+            </ol>
+        </main>
+        <aside class="screen-schedule__message">
             <span class="rhyme">If you'd like to give a lovely gift for our wedding day,</span>
             <span class="rhyme">please put your kind contribution in an envelope, we pray,</span>
             <span class="rhyme">to help us build our home in a special way.</span>
-        </p>
-    </div>
+        </aside>
+    <!-- </div> -->
 </section>

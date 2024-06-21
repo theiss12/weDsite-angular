@@ -1,5 +1,8 @@
 .component-navigation {
     position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
 
     &__toggle-bar {
         background-color: var(--light-color);
@@ -76,9 +79,10 @@
     }
 }
 
-@media (min-width: 421px) {
+@media (min-width: 1001px) {
     .component-navigation {
         position: unset;
+        font-family: Georgia, 'Times New Roman', Times, serif;
 
         &__toggle-bar {
             display: none;

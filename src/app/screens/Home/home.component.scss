@@ -3,6 +3,10 @@
     animation-duration: 1s;
     animation-fill-mode: forwards;
 
+    > * {
+        font-family: "Wedding", sans-serif;
+    }
+
     &__greeting {
         --navigation-height: 50px;
         width: 100svw;
@@ -42,22 +46,22 @@
 
         .greeting {
             &__title {
-                font-size: 48px;
+                font-size: 64px;
                 animation-delay: 1s;
             }
 
             &__subtitle {
-                font-size: 32px;
+                font-size: 56px;
                 animation-delay: 2s;
             }
 
             &__space {
-                font-size: 24px;
+                font-size: 48px;
                 animation-delay: 3s;
             }
 
             &__time {
-                font-size: 24px;
+                font-size: 48px;
                 animation-delay: 4s;
             }
         }
@@ -80,19 +84,19 @@
 
             .greeting {
                 &__title {
-                    font-size: 64px;
+                    font-size: 72px;
                 }
     
                 &__subtitle {
-                    font-size: 56px;
+                    font-size: 64px;
                 }
     
                 &__space {
-                    font-size: 48px;
+                    font-size: 56px;
                 }
     
                 &__time {
-                    font-size: 48px;
+                    font-size: 56px;
                 }
             }
         }

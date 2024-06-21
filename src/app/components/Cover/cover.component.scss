@@ -6,7 +6,7 @@
         --navigation-height: 50px;
         position: relative;
         width: 100svw;
-        height: calc(100svh - var(--navigation-height));
+        height: 100vh //calc(100svh - var(--navigation-height));
     }
 
     &__language {
@@ -122,7 +122,7 @@
     }
 }
 
-@media (min-width: 421px) {
+@media (min-width: 769px) {
     .component-cover {
         background-image: linear-gradient(to right, var(--light-color), transparent, transparent, transparent, transparent, var(--light-color));
         

@@ -14,26 +14,26 @@
 
     &__title,
     &__place-headline {
-        font-style: italic;
         text-align: center;
         font-size: 32px;
     }
 
+    &__title {
+        background-color: var(--light-color);
+        margin: 0;
+        padding: 28px 0;
+    }
+
     &__program,
     &__place-infos {
-        list-style-type: none;
-        padding: 0;
         margin: 0 0 32px;
         font-size: 20px;
     }
 
     &__program {
-        width: fit-content;
-        margin-left: auto;
-    }
-
-    &__place-info {
-        text-align: center;
+        background-color: var(--light-color);
+        padding: 0 0 30px 30px
+        // margin-left: auto;
     }
 
     &__program-item {
@@ -45,9 +45,10 @@
 
     &__message {
         font-size: 22px;
-        margin: 0 0 22px;
-        padding: 22px 0 0;
-        border-top: 1px solid var(--light-color);
+        padding: 22px;
+        margin: 0;
+        background-color: var(--light-color);
+        min-height: 25vh;
 
         .rhyme {
             display: block;
@@ -63,16 +64,38 @@
     }
 }
 
-@media (min-width: 421px) {
+@media (min-width: 1001px) {
     .screen-schedule {
+        &__main {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin: 0 0 50px;
+        }
+
         &__program {
-            width: fit-content;
             margin-right: auto;
         }
 
         &__title,
         &__place-headline {
-            font-size: 48px;
+            font-size: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::after {
+                content: ":";
+            }
+        }
+
+        &__title {
+            padding: 0;
+            background-color: var(--base-color);
+        }
+
+        &__place-headline {
+            margin: 0;
         }
 
         &__program,
@@ -80,12 +103,29 @@
             font-size: 26px;
         }
 
+        &__program {
+            background-color: var(--base-color);
+            padding: 0;
+            margin: 0;
+            padding-right: 50px;
+            border-right: 1px solid var(--dark-color);
+        }
+
+        &__place-infos {
+            margin: 0;
+        }
+
         &__message {
-            font-size: 32px;
+            padding: 50px 0 0;
+            margin: 0 auto;
+            border-top: 1px solid var(--dark-color);
+            font-size: 24px;
+            background-color: var(--base-color);
+            width: 66%;
 
             .rhyme {    
                 &::first-letter {
-                    font-size: 34px;
+                    font-size: 28px;
                 }
             }
         }
