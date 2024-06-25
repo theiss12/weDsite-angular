@@ -1,13 +1,14 @@
 import { Component } from "@angular/core";
 import { Title } from "../../components/Title/title.component"
 import { NgFor } from "@angular/common";
+import { Tiles } from "../../components/Tiles/tiles.component";
 
 @Component({
     standalone: true,
     selector: "schedule",
     templateUrl: "./schedule.component.html",
     styleUrls: ["./schedule.component.scss"],
-    imports: [Title, NgFor]
+    imports: [Title, Tiles, NgFor]
 })
 export class Schedule {
     program: any[] = [

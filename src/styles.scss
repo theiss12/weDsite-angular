@@ -10,6 +10,18 @@
     --light-color: rgb(154, 171, 137);
     --accent-color: goldenrod;
     --base-color: beige;
+    --background-gradient: linear-gradient(
+        to right, 
+        var(--light-color), 
+        transparent,
+        transparent,
+        transparent,
+        transparent,
+        transparent,
+        transparent,
+        transparent,
+        var(--light-color)
+    );
 }
 
 body {

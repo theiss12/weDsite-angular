@@ -26,13 +26,15 @@
         class="component-cover__navigation"
         (click)="movePage(-1)"
     >
-        <span class="triangle triangle--left"></span>
+        <!-- <span class="triangle triangle--left"></span> -->
+        ◀
     </button>
     <button
         class="component-cover__navigation"
         (click)="movePage(1)"
     >
-        <span class="triangle triangle--right"></span>
+        <!-- <span class="triangle triangle--right"></span> -->
+        ▶
     </button>
     <pagination [numberOfPages]="imageUrls.length" (pageOutput)="handlePagination($event)" [activePage]="currentPage"></pagination>
 </section>

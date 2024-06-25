@@ -10,6 +10,7 @@ import { CommonModule } from "@angular/common";
     imports: [Cover, CommonModule],
 })
 export class Home {
+    
     coverPages: string[] = [
         "assets/images/invite/invite-hu-1.png",
         "assets/images/invite/invite-hu-2.png",

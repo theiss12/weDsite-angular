@@ -1,4 +1,6 @@
 .component-receipt {
+    padding: 72px 0 0;
+
     &__message {
         padding: 24px 0px;
         margin: 0 0 48px;
@@ -16,6 +18,9 @@
 
 @media (min-width: 1001px) {
     .component-receipt {
+        background-image: var(--background-gradient);
+        min-height: 90svh;
+
         &__message {
             font-size: 48px;
             padding: 48px 0px;

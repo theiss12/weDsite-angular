@@ -7,13 +7,15 @@
         align-items: center;
         box-shadow: inset 0 0 20px rgba(0,0,0,.5);
         border-radius: 10px 10px 0 0;
+        background-color: var(--light-color);
 
         .display {
             &__selected-image {
                 width: 95%;
-                max-height: 95%;
+                max-height: 90%;
                 object-fit: contain;
                 cursor: pointer;
+                filter: drop-shadow(0 0 20px rgba(0,0,0,.8));
             }
         }
     }
@@ -87,6 +89,7 @@
                 font-size: 24px;
                 cursor: pointer;
                 transition: all .25s;
+                color: black;
 
                 &:active {
                     background-color: white;

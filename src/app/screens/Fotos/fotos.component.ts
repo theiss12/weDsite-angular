@@ -1,15 +1,22 @@
 import { Component } from "@angular/core";
 import { Gallery } from "../../components/Gallery/gallery.component";
 import { Title } from "../..//components/Title/title.component";
+import { NgClass } from "@angular/common";
 
 @Component({
     standalone: true,
     selector: "fotos",
     templateUrl: "./fotos.component.html",
     styleUrls: ["./fotos.component.scss"],
-    imports: [Gallery, Title]
+    imports: [Gallery, Title, NgClass]
 })
 export class Fotos {
+    zoomed: boolean = false;
+
+    toggleZoom() {
+        this.zoomed = !this.zoomed;
+    }
+
     favourites: string[] = [
         "assets/images/gallery/g1.jpg",
         "assets/images/gallery/g2.jpg",

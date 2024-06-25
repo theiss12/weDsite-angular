@@ -80,7 +80,7 @@
 
         @keyframes left-slide {
             from {
-                translate: 100% 0;
+                translate: -100% 0;
             }
             to {
                 translate: 0 0;
@@ -89,7 +89,7 @@
 
         @keyframes right-slide {
             from {
-                translate: -100% 0;
+                translate: 100% 0;
             }
             to {
                 translate: 0 0;
@@ -98,18 +98,38 @@
     }
 
     &__navigation {
+        --active-color: lightblue;
+
         position: absolute;
         top: 50%;
         translate: 0 -50%;
-        height: 60%;
+        height: 100%;
         width: 25%;
         padding: 0;
-        font-size: 72px;
+        font-size: 36px;
+        color: rgba($color: black, $alpha: .5);
         border: none;
         background-color: transparent;
+        box-sizing: border-box;
+        background-image: linear-gradient(to right, transparent, transparent);
+        background-repeat: no-repeat;
+        transition: all .5s;
+
+        &:nth-last-of-type(2) {
+            background-image: linear-gradient(to left, transparent, transparent);
+        }
 
         &:focus-visible {
             outline: none;
+        }
+
+        &:active {
+            font-size: 48px;
+            background-image: linear-gradient(to right, transparent, var(--active-color));
+
+            &:nth-last-of-type(2) {
+                background-image: linear-gradient(to left, transparent, var(--active-color));
+            }
         }
 
         &:nth-of-type(1) {
@@ -124,8 +144,6 @@
 
 @media (min-width: 769px) {
     .component-cover {
-        background-image: linear-gradient(to right, var(--light-color), transparent, transparent, transparent, transparent, var(--light-color));
-        
         &__images {
             --navigation-height: 70px;
         }
@@ -135,9 +153,9 @@
         }
 
         &__navigation {
-            cursor: pointer;
+            --active-color: white;
 
-            
+            cursor: pointer;
         }
     }
 }

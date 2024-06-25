@@ -14,7 +14,7 @@
         </div>
     </div>
     <div *ngFor="let name of dataProperties">
-        <div *ngIf="dataProperties.indexOf(name) === currentQuestion" class="container">
+        <div *ngIf="dataProperties.indexOf(name) === currentQuestion">
             <question
                 [index]="dataProperties.indexOf(name)"
                 [formData]="formData"

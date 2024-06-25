@@ -10,19 +10,36 @@
                     <em class="time">{{programItem.time}}</em> {{programItem.label}}
                 </li>
             </ul>
+            
             <h2 class="screen-schedule__place-headline">Place</h2>
             <ol class="screen-schedule__place-infos">
-                <li class="screen-schedule__place-info">Cathédrale Notre-Dame de Paris</li>
-                <li class="screen-schedule__place-info">Château Bouffémont</li>
+                <li class="screen-schedule__place-info">Cathédrale Notre-Dame de Paris (Ceremony)</li>
+                <li class="screen-schedule__place-info">Château Bouffémont (Everything else 😊)</li>
                 <ul>
                     <li class="screen-schedule__place-info">8 Rue Léon Giraudeau, 95570 Bouffémont, France</li>
                 </ul>
             </ol>
         </main>
-        <aside class="screen-schedule__message">
-            <span class="rhyme">If you'd like to give a lovely gift for our wedding day,</span>
+        <aside class="screen-schedule__teaser">
+            <h2 class="screen-schedule__teaser-title">
+                <span class="title-separator"></span>
+                Teaser
+                <span class="title-separator"></span>
+            </h2>
+            <!-- <span class="rhyme">If you'd like to give a lovely gift for our wedding day,</span>
             <span class="rhyme">please put your kind contribution in an envelope, we pray,</span>
-            <span class="rhyme">to help us build our home in a special way.</span>
+            <span class="rhyme">to help us build our home in a special way.</span> -->
+            <tiles [inputImageUrls]="[
+                'assets/images/place/p1.jpg',
+                'assets/images/place/p2.jpg',
+                'assets/images/place/p3.jpg',
+                'assets/images/place/p4.jpg',
+                'assets/images/place/p5.jpg',
+                'assets/images/place/p6.jpg',
+                'assets/images/place/p7.jpg',
+                'assets/images/place/p8.jpg',
+                'assets/images/place/p9.jpg',
+            ]"></tiles>
         </aside>
     <!-- </div> -->
 </section>

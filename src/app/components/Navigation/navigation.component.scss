@@ -1,13 +1,12 @@
 .component-navigation {
     position: relative;
+    
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
 
     &__toggle-bar {
         background-color: var(--light-color);
-        display: flex;
-        justify-content: flex-end;
         padding: 5px;
     }
 
@@ -39,7 +38,7 @@
     &__items {
         position: absolute;
         top: 0px;
-        right: 0px;
+        left: 0px;
         z-index: 100;
         min-width: 70vw;
         min-height: 50vh;
@@ -52,7 +51,7 @@
         box-shadow: 0 0 20px rgba(0,0,0,.5);
 
         &--closed {
-            translate: 0px -100%;
+            translate: -100% 0px;
             box-shadow: none;
         }
     }
@@ -70,11 +69,6 @@
             text-decoration: none;
             font-weight: bold;
             transition: all .25s;
-        }
-
-        &--closer {
-            display: flex;
-            justify-content: flex-end;
         }
     }
 }

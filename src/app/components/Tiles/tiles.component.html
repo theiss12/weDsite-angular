@@ -1,0 +1,12 @@
+<section class="component-tiles">
+    <div
+        class="component-tiles__row"
+        *ngFor="let row of renderImageUrls"
+    >
+        <img
+            *ngFor="let imageUrl of row"
+            [src]="imageUrl"
+            class="component-tiles__image"
+        >
+    </div>
+</section>

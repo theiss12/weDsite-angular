@@ -1,5 +1,5 @@
 .screen-fotos {
-    margin: 0 0 64px;
+    padding: 0 0 64px;
 
     &__qr {
         width: 70%;
@@ -8,6 +8,12 @@
         margin: 0 auto 48px auto;
         box-shadow: 0 0 20px rgba(0,0,0,.5);
         border-radius: 10px;
+        transition: scale .25s;
+        cursor: pointer;
+
+        &--zoomed {
+            scale: 1.5;
+        }
     }
 
     &__call {
@@ -17,6 +23,16 @@
         em {
             font-style: normal;
             font-weight: bold;
+        }
+
+        a {
+            color: var(--base-color);
+            background-color: var(--dark-color);
+            transition: background-color .25s;
+
+            &:hover {
+                background-color: var(--light-color);
+            }
         }
     }
 
@@ -30,8 +46,10 @@
     }
 }
 
-@media (min-width: 421px) {
+@media (min-width: 769px) {
     .screen-fotos {
+        background-image: var(--background-gradient);
+
         &__qr {
             width: 33%;
             margin: 0 auto 60px auto;

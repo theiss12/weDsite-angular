@@ -1,0 +1,53 @@
+.component-tiles {
+    --large: 160px;
+    --small: 80px;
+    --gap: 10px;
+
+    margin: 0 auto;
+    width: fit-content;
+
+    &__row {
+        display: flex;
+        gap: var(--gap);
+        margin: 0 0 var(--gap);
+
+        &:nth-child(3n -2) {
+            .component-tiles__image:nth-child(1) {
+                width: var(--large);
+            }
+        }
+
+        &:nth-child(3n - 1) {
+            .component-tiles__image:nth-child(2) {
+                width: var(--large);
+            }
+        }
+
+        &:nth-child(3n) {
+            .component-tiles__image:nth-child(3) {
+                width: var(--large);
+            }
+        }
+    }
+
+    &__image {
+        width: var(--small);
+        height: var(--small);
+        object-fit: cover;
+        background-color: var(--light-color);
+        box-shadow: 0 0 20px rgba($color: black, $alpha: .5);
+        transition: scale .25s;
+
+        &:hover {
+            scale: 1.1;
+        }
+    }
+}
+
+@media (min-width: 1001px) {
+    .component-tiles {
+        --large: 480px;
+        --small: 240px;
+        --gap: 30px;
+    }
+}

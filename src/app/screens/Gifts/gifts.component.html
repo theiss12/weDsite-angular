@@ -1,7 +1,9 @@
 <section class="screen-gifts">
     <twiggy-title title="Gifts"></twiggy-title>
     <div class="container">
-        <ul class="screen-gifts__items">
+        <ul
+            class="screen-gifts__items"
+        >
             <li *ngFor="let gift of gifts" class="screen-gifts__item">
                 <label class="item__label">
                     <input
@@ -12,6 +14,20 @@
                     >
                     {{gift.name}}
                 </label>
+            </li>
+            <li
+                [ngClass]="{
+                    'screen-gifts__item': true,
+                    'screen-gifts__item--input': true,
+                    'screen-gifts__item--filled-input': customGift !== ''
+                }"
+            >
+                <input
+                    type="text"
+                    (input)="saveCustomGift($event)"
+                    class="screen-gifts__custom-gift"
+                    placeholder="Other..."
+                >
             </li>
         </ul>
         <button

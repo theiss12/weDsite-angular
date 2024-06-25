@@ -3,9 +3,7 @@
     animation-duration: 1s;
     animation-fill-mode: forwards;
 
-    > * {
-        font-family: "Wedding", sans-serif;
-    }
+    font-family: "Wedding", sans-serif;
 
     &__greeting {
         --navigation-height: 50px;
@@ -19,12 +17,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: white;
+        color: white;    
 
         > * {
             text-align: center;
             font-style: italic;
-            margin: 0 0 36px;
+            margin: 0 0 28px;
             // text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
             text-shadow: 0 0 10px rgba(0,0,0,1);
             animation-name: greeting-swim-up;
@@ -77,10 +75,14 @@
     }
 }
 
-@media (min-width: 421px) {
+@media (min-width: 1001px) {
     .screen-home {
+        background-image: var(--background-gradient);
+
         &__greeting {
             --navigation-height: 70px;
+            clip-path: circle(50%);
+            transition: clip-path 2s;
 
             .greeting {
                 &__title {
@@ -98,6 +100,10 @@
                 &__time {
                     font-size: 56px;
                 }
+            }
+
+            &:hover {
+                clip-path: circle(100%);
             }
         }
     }
