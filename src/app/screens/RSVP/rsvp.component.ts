@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { NgFor, NgIf } from "@angular/common";
+import { NgFor, NgIf, NgClass } from "@angular/common";
 import { Router } from "@angular/router";
 import { Question } from "../../components/Question/question.component";
 import { TableComponent } from "../../components/Table/table.component";
@@ -9,7 +9,7 @@ import { ReceiptService } from "../../services/receipt.service";
     selector: "rsvp",
     templateUrl: "./rsvp.component.html",
     styleUrls: ["./rsvp.component.scss"],
-    imports: [NgFor, NgIf, Question, TableComponent],
+    imports: [NgFor, NgIf, NgClass, Question, TableComponent],
     standalone: true
 })
 export class RSVP {

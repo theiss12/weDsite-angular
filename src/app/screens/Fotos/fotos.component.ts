@@ -2,13 +2,14 @@ import { Component } from "@angular/core";
 import { Gallery } from "../../components/Gallery/gallery.component";
 import { Title } from "../..//components/Title/title.component";
 import { NgClass } from "@angular/common";
+import { Footer } from "../../components/Footer/footer.component";
 
 @Component({
     standalone: true,
     selector: "fotos",
     templateUrl: "./fotos.component.html",
     styleUrls: ["./fotos.component.scss"],
-    imports: [Gallery, Title, NgClass]
+    imports: [Gallery, Title, NgClass, Footer]
 })
 export class Fotos {
     zoomed: boolean = false;

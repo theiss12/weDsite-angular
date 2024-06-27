@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Cover } from "../../components/Cover/cover.component";
 import { CommonModule } from "@angular/common";
 
@@ -9,7 +9,7 @@ import { CommonModule } from "@angular/common";
     styleUrls: ["./home.component.scss"],
     imports: [Cover, CommonModule],
 })
-export class Home {
+export class Home implements OnInit {
     
     coverPages: string[] = [
         "assets/images/invite/invite-hu-1.png",
@@ -19,4 +19,8 @@ export class Home {
     ];
 
     time = new Date(2025, 8, 6);
+
+    ngOnInit(): void {
+        window?.scroll(0, 0);
+    }
 }

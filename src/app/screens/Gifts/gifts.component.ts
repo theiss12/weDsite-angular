@@ -4,12 +4,13 @@ import { GiftsService } from "../../services/gifts.service";
 import { ReceiptService } from "../../services/receipt.service";
 import { NgFor, NgClass } from "@angular/common";
 import { Router } from "@angular/router";
+import { Footer } from "../../components/Footer/footer.component";
 
 @Component({
     selector: "gifts",
     templateUrl: "./gifts.component.html",
     styleUrls: ["./gifts.component.scss"],
-    imports: [Title, NgFor, NgClass],
+    imports: [Title, NgFor, NgClass, Footer],
     standalone: true
 })
 export class Gifts {
@@ -33,7 +34,9 @@ export class Gifts {
 
     submitGifts() {
         let commits = this.giftsService.getCommits();
-        commits = commits === "" ? this.customGift : commits + `, ${this.customGift}`;
+        if (this.customGift !== "") {
+            commits = commits === "" ? this.customGift : commits + `, ${this.customGift}`;
+        }
         const newMessage = commits === "" ?
             "We hope you change your mind 😉" :
             `Thank you so much for ${commits} 😍`;

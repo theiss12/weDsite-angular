@@ -1,5 +1,16 @@
 .screen-gifts {
-    margin: 0 auto 72px auto;
+    margin: 0 auto;
+
+    &__prompt {
+        --prompt-spacer: 32px;
+        margin: 0 auto var(--prompt-spacer);
+        padding: var(--prompt-spacer) 0;
+        font-size: 24px;
+        border: 1px solid var(--dark-color);
+        border-left: none;
+        border-right: none;
+        text-align: center;
+    }
 
     &__items {
         background-image: url(./../../../assets/images/gifts/g4.jfif);
@@ -151,13 +162,22 @@
 
 @media (min-width: 1001px) {
     .screen-gifts {
-        // min-height: 95svh;
-        // background-image: var(--background-gradient);
-        margin: 0;
+        padding: 64px 0 0;
+
+        &__prompt {
+            --prompt-spacer: 64px;
+            max-width: 50%;
+            font-size: 32px;
+        }
+
+        &__custom-gift {
+            font-size: 32px;
+        }
 
         &__items {
             width: 50%;
             min-width: 50%;
+            margin: 0 auto 72px;
         }
 
         &__item {

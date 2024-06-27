@@ -1,0 +1,19 @@
+.component-footer {
+    --footer-spacer: 32px;
+    padding: var(--footer-spacer) 0;
+
+    &__image {
+        width: 100%;
+        height: 125px;
+        object-fit: contain;
+    }
+}
+
+@media (min-width: 769px) {
+    .component-footer {
+        --footer-spacer: 64px;
+        &__image {
+            height: 150px;
+        }
+    }
+}

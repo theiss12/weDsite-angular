@@ -1,43 +1,37 @@
 .component-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    // height: 50px;
+    --gradient-background: radial-gradient(rgba(255,255,255,1), transparent, transparent, transparent);
+    background: 
+        var(--gradient-background), /* Adjust the rgba values to set opacity */
+        url(../../../assets/images/twig-double.png) no-repeat center center;
+    background-size: cover, contain;
+    text-align: center;
     font-size: 64px;
-    font-family: "Wedding", sans-serif;
+    height: 125px;
     margin: 0 0 32px;
     padding: 32px 0 0;
-
-    &__twig {
-        height: 100%;
-        width: 25%;
-        object-fit: contain;
-
-        &:last-child {
-            transform: scaleX(-1);
-        }
-    }
-
-    &__headline {
-        display: inline-block;
-        text-align: center;
-        width: 45%;
-        line-break: anywhere;
-
-    }
+    font-family: "Wedding", Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
 
 @media (min-width: 421px) {
     .component-title {
-        justify-content: center;
-        gap: 40px;
+        --gradient-background: radial-gradient(rgba(255,255,255,1), transparent, transparent, transparent);
         height: 150px;
         font-size: 72px;
-        margin: 0 0 60px;
-        padding: 60px 0 0;
-
-        &__headline {
-            width: unset;
-        }
+        margin: 0 0 64px;
+        padding: 64px 0 0;
     }
 }
+
+// @media (min-width: 421px) {
+//     .component-title {
+//         justify-content: center;
+//         gap: 40px;
+//         margin: 0 0 60px;
+//         padding: 60px 0 0;
+
+//         &__headline {
+//             width: unset;
+//         }
+//     }
+// }

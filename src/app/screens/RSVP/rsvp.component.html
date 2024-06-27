@@ -1,9 +1,12 @@
 <section class="screen-rsvp">
     <div class="screen-rsvp__steps">
         <div
-            class="screen-rsvp__step"
             *ngFor="let step of dataProperties"
             (click)="setCurrentQuestion(dataProperties.indexOf(step))"
+            [ngClass]="{
+                'screen-rsvp__step': true,
+                'screen-rsvp__step--current': dataProperties.indexOf(step) === currentQuestion
+            }"	
         >
             <h2 class="step__index">
                 {{dataProperties.indexOf(step) + 1}}

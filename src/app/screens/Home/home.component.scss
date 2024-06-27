@@ -1,15 +1,21 @@
 .screen-home {
+    // @font-face {
+    //     font-family: "Home";
+    //     src: url(../../../assets/fonts/TYScript-Rg.ttf);
+    //     font-weight: bold;
+    // }
+
     animation-name: home-fade-in;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 
-    font-family: "Wedding", sans-serif;
+    font-family: "Wedding", Georgia, 'Times New Roman', Times, serif;
 
     &__greeting {
         --navigation-height: 50px;
         width: 100svw;
         height: calc(100svh - var(--navigation-height));
-        background-image: url('../../../assets/images/home.jpg');
+        background-image: url('../../../assets/images/home-1.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -21,7 +27,6 @@
 
         > * {
             text-align: center;
-            font-style: italic;
             margin: 0 0 28px;
             // text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
             text-shadow: 0 0 10px rgba(0,0,0,1);
@@ -44,12 +49,12 @@
 
         .greeting {
             &__title {
-                font-size: 64px;
+                font-size: 56px;
                 animation-delay: 1s;
             }
 
             &__subtitle {
-                font-size: 56px;
+                font-size: 48px;
                 animation-delay: 2s;
             }
 
@@ -59,7 +64,7 @@
             }
 
             &__time {
-                font-size: 48px;
+                font-size: 32px;
                 animation-delay: 4s;
             }
         }
@@ -81,8 +86,6 @@
 
         &__greeting {
             --navigation-height: 70px;
-            clip-path: circle(50%);
-            transition: clip-path 2s;
 
             .greeting {
                 &__title {
@@ -100,10 +103,6 @@
                 &__time {
                     font-size: 56px;
                 }
-            }
-
-            &:hover {
-                clip-path: circle(100%);
             }
         }
     }

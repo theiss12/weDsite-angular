@@ -3,7 +3,9 @@
     <!-- <div class="container"> -->
         <main class="screen-schedule__main">
             <h2 class="screen-schedule__title">
+                <span class="title-separator"></span>
                 The Great Day
+                <span class="title-separator"></span>
             </h2>
             <ul class="screen-schedule__program">
                 <li *ngFor="let programItem of program" class="screen-schedule__program-item">
@@ -11,7 +13,11 @@
                 </li>
             </ul>
             
-            <h2 class="screen-schedule__place-headline">Place</h2>
+            <h2 class="screen-schedule__place-headline">
+                <span class="title-separator"></span>
+                Place
+                <span class="title-separator"></span>
+            </h2>
             <ol class="screen-schedule__place-infos">
                 <li class="screen-schedule__place-info">Cathédrale Notre-Dame de Paris (Ceremony)</li>
                 <li class="screen-schedule__place-info">Château Bouffémont (Everything else 😊)</li>
@@ -29,17 +35,20 @@
             <!-- <span class="rhyme">If you'd like to give a lovely gift for our wedding day,</span>
             <span class="rhyme">please put your kind contribution in an envelope, we pray,</span>
             <span class="rhyme">to help us build our home in a special way.</span> -->
-            <tiles [inputImageUrls]="[
-                'assets/images/place/p1.jpg',
-                'assets/images/place/p2.jpg',
-                'assets/images/place/p3.jpg',
-                'assets/images/place/p4.jpg',
-                'assets/images/place/p5.jpg',
-                'assets/images/place/p6.jpg',
-                'assets/images/place/p7.jpg',
-                'assets/images/place/p8.jpg',
-                'assets/images/place/p9.jpg',
-            ]"></tiles>
+            <tiles
+                [inputImageUrls]="[
+                    'assets/images/place/p1.jpg',
+                    'assets/images/place/p2.jpg',
+                    'assets/images/place/p3.jpg',
+                    'assets/images/place/p4.jpg',
+                    'assets/images/place/p5.jpg',
+                    'assets/images/place/p6.jpg',
+                    'assets/images/place/p7.jpg',
+                    'assets/images/place/p8.jpg',
+                    'assets/images/place/p9.jpg',
+                ]"
+            ></tiles>
         </aside>
+        <footer></footer>
     <!-- </div> -->
 </section>

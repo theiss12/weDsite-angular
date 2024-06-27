@@ -1,6 +1,4 @@
 .screen-fotos {
-    padding: 0 0 64px;
-
     &__qr {
         width: 70%;
         object-fit: contain;
@@ -48,6 +46,7 @@
 
 @media (min-width: 769px) {
     .screen-fotos {
+        padding: 64px 0 0;
         background-image: var(--background-gradient);
 
         &__qr {

@@ -12,6 +12,13 @@ export class GiftsService {
         {id: 5, name: "Mansion", taken: false},
         {id: 6, name: "Tropical Island", taken: false},
         {id: 7, name: "World Tour with Private Jet", taken: false},
+        {id: 8, name: "Love", taken: false},
+        {id: 9, name: "Friendship", taken: false},
+        {id: 10, name: "Yourself", taken: false},
+        {id: 11, name: "Kindness", taken: false},
+        {id: 12, name: "Cooperation", taken: false},
+        {id: 13, name: "Celebration", taken: false},
+        {id: 14, name: "Best Wishes", taken: false},
     ]
 
     getCommits(): string {

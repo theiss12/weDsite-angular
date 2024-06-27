@@ -1,4 +1,6 @@
 .screen-rsvp {
+    background-color: var(--light-color);
+    min-height: 100svh;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
@@ -25,6 +27,10 @@
         box-shadow: 0 0 20px rgba(0,0,0,.5);
         width: 25%;
         transition: all .25s;
+
+        &--current {
+            background-color: white;
+        }
 
         &:active {
             background-color: white;
@@ -80,10 +86,10 @@
 
 @media (min-width: 769px) {
     .screen-rsvp {
-        min-height: 95svh;
-        background-image: var(--background-gradient);
-        padding: 0 0 72px;
-    
+        // min-height: 95svh;
+        // background-image: var(--background-gradient);
+        // padding: 0 0 72px;
+
         &__steps {
             flex-direction: row;
             justify-content: flex-start;
