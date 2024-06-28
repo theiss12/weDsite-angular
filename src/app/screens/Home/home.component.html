@@ -1,17 +1,19 @@
 <section class="screen-home">
     <div class="screen-home__greeting">
-        <h1 class="greeting__title">
-            Fanni & Tomi
-        </h1>
-        <h2 class="greeting__subtitle">
-            We are getting married!
-        </h2>
-        <h3 class="greeting__space">
-            Paris, France
-        </h3>
-        <h3 class="greeting__time">
-            {{time | date:'EEEE, MMMM d, y'}}
-        </h3>
+        <div class="screen-home__text-background">
+            <h1 class="greeting__title">
+                Fanni & Tomi
+            </h1>
+            <h2 class="greeting__subtitle">
+                We are getting married!
+            </h2>
+            <h3 class="greeting__space">
+                Paris, France
+            </h3>
+            <h3 class="greeting__time">
+                {{time | date:'EEEE, MMMM d, y'}}
+            </h3>
+        </div>
     </div>
     <cover [imageUrls]="coverPages"></cover>
 </section>

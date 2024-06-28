@@ -1,22 +1,13 @@
 .screen-directions {
+    padding: 0 0 64px;
     min-height: 100svh;
     background-image: url(../../../assets/images/mansion.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    animation-name: directions-fade-in;
+    animation-name: screen-fade-in;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    padding: 0 0 64px;
-
-    @keyframes directions-fade-in {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
 
     &__accommodation,
     &__directions {

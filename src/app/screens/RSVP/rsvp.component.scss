@@ -5,6 +5,10 @@
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
 
+    animation-name: screen-fade-in;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+
     &__steps {
         display: flex;
         flex-direction: column;

@@ -50,7 +50,7 @@ body {
 
     &:active {
         color: var(--dark-color);
-        background-color: var(--base-color);
+        background-color: transparent
     }
 
     &:disabled {
@@ -91,7 +91,7 @@ body {
     .button {
         &:hover {
             color: var(--dark-color);
-            background-color: var(--base-color);
+            background-color: transparent
         }
 
         &:disabled {
@@ -105,5 +105,14 @@ body {
     .triangle {
         --triangle-size: 40px;
         --triangle-size-correction: 10px;
+    }
+}
+
+@keyframes screen-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

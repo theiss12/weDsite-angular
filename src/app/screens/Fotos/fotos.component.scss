@@ -1,4 +1,8 @@
 .screen-fotos {
+    animation-name: screen-fade-in;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+
     &__qr {
         width: 70%;
         object-fit: contain;
@@ -50,7 +54,7 @@
         background-image: var(--background-gradient);
 
         &__qr {
-            width: 33%;
+            width: 25%;
             margin: 0 auto 60px auto;
         }
 

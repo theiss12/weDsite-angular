@@ -117,11 +117,11 @@
 
 @media (min-width: 1001px) {
     .component-gallery {
-        width: 50%;
         margin: 0 auto;
+        width: 75%;
 
         &__display {
-            height: 400px;
+            height: 500px;
         }
 
         &__preview {

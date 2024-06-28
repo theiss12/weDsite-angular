@@ -1,5 +1,8 @@
 .screen-gifts {
     margin: 0 auto;
+    animation-name: screen-fade-in;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 
     &__prompt {
         --prompt-spacer: 32px;
@@ -162,6 +165,7 @@
 
 @media (min-width: 1001px) {
     .screen-gifts {
+        background-image: var(--background-gradient);
         padding: 64px 0 0;
 
         &__prompt {

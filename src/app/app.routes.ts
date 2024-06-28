@@ -4,7 +4,7 @@ import { Fotos } from './screens/Fotos/fotos.component';
 import { Schedule } from './screens/Schedule/schedule.component';
 import { Directions } from './screens/Directions/directions.component';
 import { Gifts } from './screens/Gifts/gifts.component';
-import { Receipt } from './components/Receipt/receipt.component';
+import { Receipt } from './screens/Receipt/receipt.component';
 import { RSVP } from './screens/RSVP/rsvp.component';
 
 export const routes: Routes = [
